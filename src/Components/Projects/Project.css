@@ -1,0 +1,286 @@
+/* --------------------- Portfolio Section --------------------- */
+#portfolio {
+    padding: 100px 150px;
+    /* background-color: #11111fe3; */
+    color: #fff;
+}
+
+#portfolio h2,
+#contact h2 {
+    text-align: center;
+    font-size: 50px;
+    /* margin-bottom: 10px; */
+}
+
+/* #portfolio h2 span, #contact h2 span { */
+/* color: rgba(157, 78, 221, 0.5); */
+/* border-bottom: 4px solid rgba(157, 78, 221, 0.5); */
+/* padding-bottom: 5px; */
+/* } */
+
+/* --------------------- Filter Buttons --------------------- */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter-buttons button {
+    margin: 0 10px;
+    padding: 10px 25px;
+    background: #11111f;
+    color: #fff;
+    border: 4px solid rgba(157, 78, 221, 0.5);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5), 0 0 50px rgba(157, 78, 221, 0.5);
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    /* background-color: #11111f; */
+    border: 2px solid white;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* --------------------- Portfolio Grid --------------------- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 815px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------- Project Card --------------------- */
+.project-card {
+    background-color: #1c1c2f;
+    border-radius: 15px;
+    /* height: 600px; */
+    transition: transform 0.5s, box-shadow 0.5s;
+    border: 0.5px solid #1c1c2f;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #9d4edd;
+    border-left: 2px solid #9d4edd;
+    box-shadow: -4px 4px 5px -2px #9d4edd;
+}
+
+.project-card> :not(img) {
+    padding: 0 20px 25px 25px;
+}
+
+.project-card:hover {
+    transform: translateY(-20px) !important;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5),
+        0 0 40px rgba(157, 78, 221, 0.5);
+    border-top: 4px solid #9d4edd;
+    border-right: 4px solid #9d4edd;
+    border-bottom: none;
+    border-left: none;
+}
+
+.project-card img {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    /* border-radius: 50px; */
+    border-bottom: 1px solid #9d4edd;
+    filter: drop-shadow(0 0 10px #9D4EDD);
+}
+
+
+.project-card:hover img {
+    transform: scale(1.04);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #a954ee;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #fff;
+    flex-grow: 1;
+}
+
+/* --------------------- Buttons inside Card --------------------- */
+.project-card .buttons {
+    display: flex;
+    gap: 40px;
+    margin-bottom: auto !important;
+    margin-left: 50px;
+
+}
+
+.project-card .buttons a {
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-card .buttons a.demo {
+    background-color: #11111f;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5), 0 0 20px rgba(157, 78, 221, 0.5);
+    border: 2px solid #9d4edd;
+}
+
+.project-card .buttons a.demo:hover {
+    box-shadow: 0 0 60px rgba(157, 78, 221, 0.5), 0 0 30px rgba(157, 78, 221, 0.5);
+    border: 1px solid #fff;
+    background-color: rgba(157, 78, 221, 0.5);
+    color: white;
+    transform: translateY(-12px);
+    letter-spacing: 2px;
+
+}
+
+.project-card .buttons a.code {
+    border: 2px solid #fff;
+    color: #fff;
+    background: #11111f;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5), 0 0 20px rgba(157, 78, 221, 0.5);
+}
+
+.project-card .buttons a.code:hover {
+    background-color: rgba(157, 78, 221, 0.5);
+    color: white;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5), 0 0 40px rgba(157, 78, 221, 0.5);
+    border: 2px solid #11111f;
+    transform: translateY(9px);
+    letter-spacing: 1.5px;
+}
+/* 
+@keyframes floatUp {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.project-card .buttons a.demo {
+    display: inline-block;
+    animation: floatUp 3s ease-in-out infinite;
+}
+
+.project-card .buttons a.code {
+    display: inline-block;
+    animation: floatDown 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.project-card .buttons a:hover {
+    animation-play-state: paused;
+} */
+
+
+/* --------------------- See More Button --------------------- */
+.see-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.see-more button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #11111f;
+    border: 2px solid #9d4edd;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5), 0 0 20px rgba(157, 78, 221, 0.5);
+}
+
+.see-more button:hover {
+    background-color: rgba(157, 78, 221, 0.5);
+    color: white;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5), 0 0 40px rgba(157, 78, 221, 0.5);
+    letter-spacing: 2px;
+}
+
+/* --------------------- Arrow Animation --------------------- */
+.arrow-icon {
+    font-size: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* --------------------- Fade + Slide Animation --------------------- */
+.project-card.fade-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.5s forwards;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

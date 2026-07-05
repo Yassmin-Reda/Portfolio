@@ -1,0 +1,258 @@
+#Skills {
+    /* background: #081b29; */
+    color: #fff;
+    padding: 80px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative !important;
+}
+
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+}
+
+/*  CONTAINERS  */
+.container1 {
+    width: 100%;
+    max-width: 600px; 
+    padding: 50px 45px;
+    background: #11111f8a;
+    border-radius: 24px;
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.08),
+        0 5px 15px rgba(0,0,0,0.04);
+}
+
+.heading1 {
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    border-bottom: 1px solid  #9d4edd;
+    padding-bottom: 10px;
+}
+
+/*  TECHNICAL BARS  */
+
+.Technical-bars{
+    margin-top: 60px;
+}
+
+.Technical-bars .bar {
+    margin: 50px 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 10px;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 7px;
+}
+
+/* Animate skill names */
+
+.Technical-bars .bar .info span{
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: showText 0.8s ease forwards;
+}
+
+/* Delay لكل عنصر */
+.Technical-bars .bar:nth-child(1) .info span{
+    animation-delay: 0.2s;
+}
+.Technical-bars .bar:nth-child(2) .info span{
+    animation-delay: 0.4s;
+}
+.Technical-bars .bar:nth-child(3) .info span{
+    animation-delay: 0.6s;
+}
+.Technical-bars .bar:nth-child(4) .info span{
+    animation-delay: 0.8s;
+}
+.Technical-bars .bar:nth-child(5) .info span{
+    animation-delay: 1s;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 10px;
+}
+
+.Technical-bars .bar .progress-line span {
+    position: absolute;
+    height: 100%;
+    background: #9d4edd;
+    border-radius: 10px;
+}
+
+/* Widths */
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.javascript span { width: 85%; }
+.progress-line.bootstrap span { width: 80%; }
+.progress-line.react span { width: 75%; }
+
+/* Percentage label */
+.progress-line span::after {
+    position: absolute;
+    right: -20px;
+    top: -28px;
+    padding: 2px 8px;
+    background:  rgba(157, 78, 221, 0.5);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.progress-line.html span::after { content: "90%"; }
+.progress-line.css span::after { content: "60%"; }
+.progress-line.javascript span::after { content: "85%"; }
+.progress-line.bootstrap span::after { content: "80%"; }
+.progress-line.react span::after { content: "75%"; }
+
+/* Arrow */
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -10px;
+    border: 6px solid transparent;
+    border-top-color: #9d4edd;
+}
+
+/*  RADIAL BARS  */
+
+.radial-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.radial-bar {
+    width: 50%;
+    height: 200px;
+    position: relative;
+}
+
+
+.radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 150px;
+    height: 150px;
+}
+
+/* Background circle */
+.progress-bar {
+    stroke-width: 10;
+    stroke: white;
+    fill: transparent;
+}
+
+/* Foreground circle */
+.path{
+    stroke-width: 10;
+    stroke:#9d4edd ;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-circle 2s ease forwards;
+}
+
+/* Individual percentages */
+.path-1{ --offset: 50; }
+.path-2{ --offset: 176; }
+.path-3{ --offset: 125; }
+.path-4{ --offset: 75; }
+
+@keyframes animate-circle{
+    100%{
+        stroke-dashoffset: var(--offset);
+    }
+}
+/* Center Percentage */
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Bottom Text */
+.radial-bar .text {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.radial-bar .text{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: showProfessional 0.8s ease forwards;
+}
+
+.radial-bar:nth-child(1) .text{
+    animation-delay: 0.5s;
+}
+.radial-bar:nth-child(2) .text{
+    animation-delay: 0.8s;
+}
+.radial-bar:nth-child(3) .text{
+    animation-delay: 1.1s;
+}
+.radial-bar:nth-child(4) .text{
+    animation-delay: 1.4s;
+}
+
+@keyframes showProfessional{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.Technical-bars .bar .progress-line span{
+    width: 0;
+    animation: animate 1.5s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+
+
+@keyframes animate{
+    100%{
+        width: var(--width);
+    }
+}
+
+/* Set widths with variable */
+.progress-line.html span { --width: 90%; }
+.progress-line.css span { --width: 60%; }
+.progress-line.javascript span { --width: 85%; }
+.progress-line.bootstrap span { --width: 80%; }
+.progress-line.react span { --width: 75%; }
